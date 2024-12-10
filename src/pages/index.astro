@@ -1,0 +1,47 @@
+---
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <!-- Video de fondo -->
+    <div class="video-background">
+      <video autoplay muted loop>
+        <source src="/assets/fondo_animado.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </video>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+      <!-- Encabezado -->
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/index">Inicio</a></li>
+            <li><a href="/about-me">Acerca de mí</a></li>
+            <li><a href="/projects">Mis Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Sección Inicio -->
+      <section id="inicio" class="hero">
+        <h1>¡Hola, soy DB3NJA!</h1>
+        <p>Desarrollador Web | Especialista en Frontend</p>
+        <a href="#proyectos" class="btn">Ver Proyectos</a>
+      </section>
+    </div>
+
+    <!-- Footer común -->
+    <Footer />
+  </body>
+</html>
