@@ -1,5 +1,5 @@
 ---
-import Footer from '../components/Footer.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <!DOCTYPE html>
@@ -10,36 +10,34 @@ import Footer from '../components/Footer.astro';
     <title>Mi Portafolio</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
+  <div class="content">
+    <!-- Encabezado -->
+    <header>
+      <!-- Contenedor flex para el menú y redes sociales -->
+      <div class="header-content">
+        <!-- Menú de navegación -->
+        <nav>
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about-me">Sobre Mí</a></li>
+            <li><a href="/projects">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
   <body>
-    <!-- Video de fondo -->
     <div class="video-background">
       <video autoplay muted loop>
-        <source src="/assets/background-video.mp4" type="video/mp4" />
+        <source src="/assets/fondo_animado.mp4" type="video/mp4" />
         Tu navegador no soporta videos HTML5.
       </video>
     </div>
 
-    <!-- Contenido principal -->
-    <div class="content">
-      <!-- Encabezado -->
-      <header>
-        <nav>
-          <ul>
-            <li><a href="/index">Inicio</a></li>
-            <li><a href="/about-me">Acerca de mí</a></li>
-            <li><a href="/projects">Mis Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
 
-      <!-- Sección Inicio -->
-      <section id="inicio" class="hero">
-        <h1>¡Hola, soy [Tu Nombre]!</h1>
-        <p>Desarrollador Web | Especialista en Frontend</p>
-        <a href="#proyectos" class="btn">Ver Proyectos</a>
-      </section>
-    </div>
+
+    
+   
+
+    
 
     <!-- Footer común -->
     <Footer />

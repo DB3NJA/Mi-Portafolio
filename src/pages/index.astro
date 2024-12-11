@@ -1,6 +1,6 @@
----
-import Footer from '../components/Footer.astro';
----
+--- 
+import Footer from '../components/footer.astro'; 
+--- 
 
 <!DOCTYPE html>
 <html lang="es">
@@ -8,6 +8,7 @@ import Footer from '../components/Footer.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portafolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -23,22 +24,43 @@ import Footer from '../components/Footer.astro';
     <div class="content">
       <!-- Encabezado -->
       <header>
-        <nav>
-          <ul>
-            <li><a href="/index">Inicio</a></li>
-            <li><a href="/about-me">Acerca de mí</a></li>
-            <li><a href="/projects">Mis Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+        <div class="header-content">
+          <!-- Menú de navegación -->
+          <nav>
+            <ul>
+              <li><a href="/">Inicio</a></li>
+              <li><a href="/about-me">Sobre Mí</a></li>
+              <li><a href="/projects">Proyectos</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
 
-      <!-- Sección Inicio -->
-      <section id="inicio" class="hero">
-        <h1>¡Hola, soy DB3NJA!</h1>
-        <p>Desarrollador Web | Especialista en Frontend</p>
-        <a href="#proyectos" class="btn">Ver Proyectos</a>
-      </section>
+          <!-- Redes sociales -->
+          <div class="header-redes">
+            <ul>
+              <li><a href="https://github.com/DB3NJA" target="_blank"><i class="fab fa-github"></i></a></li>
+              <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="mailto:youremail@example.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sección de descripción del programador con imagen -->
+        <section id="inicio" class="hero">
+          <div class="hero-content">
+            <div class="descripcion">
+              <h2 class="animate-text">Soy un desarrollador Full Stack y diseñador apasionado por la tecnología. Mi objetivo es crear soluciones web innovadoras, optimizando el diseño y la funcionalidad en cada proyecto.</h2>
+            </div>
+
+            <!-- Imagen del programador -->
+            <div class="imagen-container">
+              <img src="/assets/programador_optimizada.jpg" alt="Programador Full Stack" class="imagen">
+            </div>
+          </div>
+        </section>
+      </header>
     </div>
 
     <!-- Footer común -->

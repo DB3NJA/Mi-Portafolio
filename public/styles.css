@@ -1,85 +1,124 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: transparent;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-  }
-  
-  header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  header nav ul li {
-    margin: 0 1rem;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
-  .about,
-  .projects,
-  .contact {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  
-  .contact form label {
-    margin: 0.5rem 0 0.25rem;
-  }
-  
-  .contact form input,
-  .contact form textarea {
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-  }
-  
-  button {
-    padding: 0.5rem;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: transparent;
-    color: #fff;
-  }
+header {
+  background: transparent;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-content {
+  display: flex; /* Flexbox para el contenido */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Alineación vertical de los elementos */
+}
+
+header nav {
+  flex-grow: 1; /* El menú de navegación ocupa el espacio restante */
+  display: flex;
+  justify-content: center; /* Centra el menú de navegación */
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ff6347;
+}
+
+.header-redes {
+  display: flex;
+  justify-content: flex-end; /* Alinea los íconos de redes sociales a la derecha */
+}
+
+.header-redes ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-redes ul li {
+  margin: 0 1rem;
+}
+
+.header-redes ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.header-redes ul li a:hover {
+  color: #ff6347; /* Color de cambio en hover (por ejemplo, tomate) */
+}
+
+.about,
+.projects,
+.contact {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact form label {
+  margin: 0.5rem 0 0.25rem;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: transparent;
+  color: #fff;
+}
 
 /* Video de fondo */
 .video-background {
@@ -109,6 +148,65 @@
 
 .hero {
   margin-top: 20vh; /* Ajusta el contenido verticalmente */
+  display: flex;
+  justify-content: space-between; /* Distribuye en dos columnas */
+  align-items: center; /* Centra verticalmente */
 }
 
-  
+/* Estilo para el cuadro de descripción */
+.hero-content {
+  display: flex;
+  justify-content: space-between; /* Coloca el texto y la imagen en columnas */
+  align-items: center;
+  width: 100%;
+}
+
+/* Estilo para la descripción */
+.descripcion {
+  background-color: rgba(97, 97, 97, 0.7); /* Fondo transparente oscuro */
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  max-width: 60%; /* Ajusta el tamaño del cuadro de texto */
+  word-wrap: break-word; /* Permite que el texto continúe en la siguiente línea */
+  overflow: hidden; /* Evita que el texto se desborde */
+  display: inline-block; /* Asegura que el contenedor sea del tamaño del contenido */
+}
+
+.descripcion h2 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  white-space: normal; /* Permite que el texto se divida en varias líneas */
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-text {
+  display: inline-block;
+  white-space: normal; /* Permite que el texto se divida en varias líneas */
+  overflow: hidden;
+  width: 100%;
+  animation: typing 5s steps(40) 1s forwards;
+}
+
+/* Estilo para la imagen */
+.imagen-container {
+  max-width: 35%; /* Ajusta el tamaño de la imagen */
+  flex-shrink: 0;
+}
+
+.imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
